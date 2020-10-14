@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    	<head>
+        	<meta charset="utf-8"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		{% load static %}
+
+		<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+
+		<title>about.html</title>
+    	</head>
+	<body>
+		<header>
+			<table class="nav-b">
+				<tr>
+					<th class="nav-element">
+						<a class="nav-a" href="index"> Home </a>
+					</th>
+					<th class="nav-element">
+						<a class="nav-a" href="/blog/about"> About Me </a>
+					</th>
+					<th class="nav-element">
+						<a class="nav-a" href="/blog/tips"> Tech Tips </a>
+					</th>
+
+
+				</tr>
+			</table>
+		</header>
+		<main>
+
+			<h1>The current time is: {{time}} </h1>
+			<img class="portrait" src="{% static 'blog/images/aragorn_portrait.jpg' %}" alt="Aragorn">
+			<h1 class="Name"> Aragorn II Elessar </h1>
+			<div class="bio">
+				Aragorn II, son of Arathorn II and Gilraen, also known as Elessar and Strider, was the 16th Chieftain of the Dúnedain of the North; later crowned King Elessar Telcontar (March 1, 2931 - FO 120 or SR 1541), the 26th King of Arnor and 35th King of Gondor - and first High King of Gondor and Arnor since the short reign of Isildur. He was a great ranger and warrior, and as Isildur's heir he bore the shards of Narsil, reforged and renamed Andúril, Flame of the West, in the War of the Ring.
+			</div>
+			<div class="row">
+					<div class="card" >
+						<img src="{% static 'blog/images/aragorn_plays_with_fire.jpg' %}" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Fire</h5>
+						<p class="card-text">Aragorn has a deep love for fighting with fire.</p>
+						</div>
+					</div>
+					<div class="card" >
+						<img src="{% static 'blog/images/aragorn_reading_anchient_book.png' %}" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Books</h5>
+						<p class="card-text">Aragorn really knows his history. He can often be found studying anchient text.</p>
+						</div>
+					</div>
+					<div class="card" >
+						<img src="{% static 'blog/images/aragorn_talks_to_ghosts.jpg' %}" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Ghosts</h5>
+						<p class="card-text">Aragorn has ghost friends who will show up and fight for him.</p>
+						</div>
+					</div>
+			</div>
+		</main>
+    </body>
+</html>

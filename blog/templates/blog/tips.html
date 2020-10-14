@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+        	<meta charset="utf-8"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		{% load static %}
+
+		<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+		<title>tips.html</title>
+    	</head>
+	<body>
+		<header>
+			<table class="nav-b">
+				<tr>
+					<th class="nav-element">
+						<a class="nav-a" href="index.html"> Home </a>
+					</th>
+					<th class="nav-element">
+						<a class="nav-a" href="/blog/about"> About Me </a>
+					</th>
+					<th class="nav-element">
+						<a class="nav-a" href="/blog/tips"> Tech Tips </a>
+					</th>
+
+				</tr>
+			</table>
+		</header>
+	    	<main>
+			<h1>The current time is: {{time}} </h1>
+		    	<h1> Tips for all the tech </h1>
+			<ol id="tipsnav">
+				<li><a href="#bash"> bash </a></li>
+				<li><a href="#git"> git </a></li>
+				<li><a href="#html"> html </a></li>
+				<li><a href="#css"> css </a></li>
+			</ol>
+		    	<section>
+				<h2><a id="bash"> bash </a></h2>
+			    	<table>
+				    	<tr>
+					    	<th> Command </th>
+					 	<th> Description </th>
+					    	<th> Example </th>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	echo [ARG0 ARG1 ...]
+						    	</code>
+					    	</td>
+					    	<td>
+						    	print arguments to the screen
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	echo "hello there"
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+						    	<code>
+							    	ls
+						    	</code>
+					    	</td>
+					    	<td>
+						    	list files
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	ls
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+						<code>
+							    	cat [FILE0 FILE1 ...]
+						    	</code>
+					    	</td>
+					    	<td>
+						    	print files to the screen
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	cat
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+						    	<code>
+							    	clear
+						    	</code>
+					    	</td>
+					    	<td>
+						    	clears the screen
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	clear
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+						<code>
+							    	reset
+						    	</code>
+					    	</td>
+					    	<td>
+						    	reset the terminal
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	reset
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+						    	<code>
+							    	man COMMAND
+						    	</code>
+					    	</td>
+					    	<td>
+						    	view the manual for the command
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	man ls
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+						<code>
+							    	type COMMAND
+						    	</code>
+					    	</td>
+					    	<td>
+						    	display the type of the command
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	type git
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+						    	<code>
+							    	cp TARGET DEST
+						    	</code>
+					    	</td>
+					    	<td>
+						    	copies the target to the destination
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	cp ~/.bashrc ~/.basrc_old
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+						<code>
+							    	mv TARGET DEST
+						    	</code>
+					    	</td>
+					    	<td>
+						    	move target to destination
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	mv ass0.java assn0.java
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+						    	<code>
+							    	rm FILE0 [FILE1...]
+						    	</code>
+					    	</td>
+					    	<td>
+						    	removes the file(s)
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	rm -r /*
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+						<code>
+							    	cd DIR
+						    	</code>
+					    	</td>
+					    	<td>
+						    	change directory
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	cd src
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+						    	<code>
+							    	mkdir DIR0 [DIR1...]
+						    	</code>
+					    	</td>
+					    	<td>
+						    	make a new directory
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	mkdir lib
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+						    	<code>
+							    	rmdir DIR0 [DIR1...]
+						    	</code>
+					    	</td>
+					    	<td>
+						    	remove empty directory
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	rmdir lib
+						    	</code>
+					    	</td>
+				    	</tr>
+			    	</table>
+		    	</section>
+		    	<section>
+				<h2> <a id="git">git </a></h2>
+			    	<table>
+				    	<tr>
+					    	<th> Command </th>
+					 	<th> Description </th>
+					    	<th> Example </th>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	git config
+						    	</code>
+					    	</td>
+					    	<td>
+						    	set and view gits config parameters
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	git config core.filemode true
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	git status
+						    	</code>
+					    	</td>
+					    	<td>
+						    	status of local files
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	git status
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	git clone
+						    	</code>
+					    	</td>
+					    	<td>
+						    	download a remote repo to your computer
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	git clone git@gitlab.cs.usu.edu:sdk121/cs2610-kasteler-spencer-assn0.git
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	git add
+						    	</code>
+					    	</td>
+					    	<td>
+						    	adds files to be included in repo
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	git add main.c
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	git commit
+						    	</code>
+					    	</td>
+					    	<td>
+						    	permanently records changes into the repo
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	git commit -m "very cool changes"
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	git log
+						    	</code>
+					    	</td>
+					    	<td>
+						    	review commit history
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	git log
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	git remote
+						    	</code>
+					    	</td>
+					    	<td>
+						    	link a remote repo with this local repository
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	git remote add -f -t master -m master origin git://example.com/git.git/
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	git push
+						    	</code>
+					    	</td>
+					    	<td>
+						    	send commited changes to a remote repo
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	git push
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	git pull
+						    	</code>
+					    	</td>
+					    	<td>
+						    	download and integrate changes from remote repo
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	git pull
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	git init
+						    	</code>
+					    	</td>
+					    	<td>
+						    	initialize a folder as a local repo
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	git init
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	</table>
+		    	</section>
+		    	<section>
+				<h2> <a id="html">html </a></h2>
+			    	<table>
+				    	<tr>
+					    	<th> tag </th>
+					 	<th> Description </th>
+					    	<th> Example </th>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	title
+						    	</code>
+					    	</td>
+					    	<td>
+						    	defines the document's title that is shown in a browser's title bar or a page's tab.
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	&lt;title&gt; tips.html &lt;/title&gt;
+						    	</code>
+					    	</td>
+				    	</tr>
+	    				<tr>
+					    	<td>
+							<code>
+							    	h1
+						    	</code>
+					    	</td>
+					    	<td>
+						    	Header one. typically the main head
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	&lt;h1&gt; Tips for all the tech &lt;;/h1&gt;;
+						    	</code>
+					    	</td>
+				    	</tr>
+	    				<tr>
+					    	<td>
+							<code>
+							    	h2
+						    	</code>
+					    	</td>
+					    	<td>
+						    	Header two. sub header
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	&lt;h2&gt; html &lt;/h2&gt;
+						    	</code>
+					    	</td>
+				    	</tr>
+	    				<tr>
+					    	<td>
+							<code>
+							    	p
+						    	</code>
+					    	</td>
+					    	<td>
+						    	represents a paragraph
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	&lt;p&gt; this is a paragraph &lt;/p&gt;
+						    	</code>
+					    	</td>
+				    	</tr>
+	    				<tr>
+					    	<td>
+							<code>
+							    	code
+						    	</code>
+					    	</td>
+					    	<td>
+						    	used to represent code
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	&lt;code&gt; code &lt;/code&gt;
+						    	</code>
+					    	</td>
+				    	</tr>
+	    				<tr>
+					    	<td>
+							<code>
+							    	a
+						    	</code>
+					    	</td>
+					    	<td>
+						    	hyperlink anchor
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	&lt;a href="https://example.com"&gt; Website &lt;/a&gt;
+						    	</code>
+					    	</td>
+				    	</tr>
+	    				<tr>
+					    	<td>
+							<code>
+							    	img
+						    	</code>
+					    	</td>
+					    	<td>
+						    	embeds an image into a document
+					    	</td>
+					    	<td>
+						    	<code> 
+							    	&lt;img src="/media/cc0-images/grapefruit-slice-332-332.jpg" alt="Grapefruit slice atop a pile of other slices"&gt;
+						    	</code>
+					    	</td>
+				    	</tr>
+	    				<tr>
+					    	<td>
+							<code>
+							    	ol
+						    	</code>
+					    	</td>
+					    	<td>
+						    	ordered list
+					    	</td>
+					    	<td>
+						    	<code> 
+								&lt;ol&gt; <br>
+								 &emsp;&lt;li&gt;Mix flour, baking powder, sugar, and salt.&lt;/li&gt; <br>
+								  &emsp;&lt;li&gt;In another bowl, mix eggs, milk, and oil.&lt;/li&gt;<br>
+								  &emsp;&lt;li&gt;Stir both mixtures together.&lt;/li&gt;<br>
+								  &emsp;&lt;li&gt;Fill muffin tray 3/4 full.&lt;/li&gt;<br>
+								  &emsp;&lt;li&gt;Bake for 20 minutes.&lt;/li&gt;<br>
+								&lt;/ol&gt;
+						    	</code>
+					    	</td>
+				    	</tr>
+	    				<tr>
+					    	<td>
+							<code>
+							    	ol
+						    	</code>
+					    	</td>
+					    	<td>
+						    	ordered list
+					    	</td>
+					    	<td>
+						    	<code> 
+								&lt;ul&gt; <br>
+								 &emsp;&lt;li&gt;Mix flour, baking powder, sugar, and salt.&lt;/li&gt; <br>
+								  &emsp;&lt;li&gt;In another bowl, mix eggs, milk, and oil.&lt;/li&gt;<br>
+								  &emsp;&lt;li&gt;Stir both mixtures together.&lt;/li&gt;<br>
+								  &emsp;&lt;li&gt;Fill muffin tray 3/4 full.&lt;/li&gt;<br>
+								  &emsp;&lt;li&gt;Bake for 20 minutes.&lt;/li&gt;<br>
+								&lt;/ul&gt;
+						    	</code>
+					    	</td>
+				    	</tr>
+	    				<tr>
+					    	<td>
+							<code>
+							    	li
+						    	</code>
+					    	</td>
+					    	<td>
+						    	element in list
+					    	</td>
+					    	<td>
+						    	<code> 
+								&lt;ul&gt; <br>
+								 &emsp;&lt;li&gt;Mix flour, baking powder, sugar, and salt.&lt;/li&gt; <br>
+								  &emsp;&lt;li&gt;In another bowl, mix eggs, milk, and oil.&lt;/li&gt;<br>
+								  &emsp;&lt;li&gt;Stir both mixtures together.&lt;/li&gt;<br>
+								  &emsp;&lt;li&gt;Fill muffin tray 3/4 full.&lt;/li&gt;<br>
+								  &emsp;&lt;li&gt;Bake for 20 minutes.&lt;/li&gt;<br>
+								&lt;/ul&gt;
+						    	</code>
+					    	</td>
+				    	</tr>
+		    		</table>
+		    	</section>
+		    	<section>
+				<h2> <a id="css">css </a></h2>
+			    	<table>
+				    	<tr>
+					    	<th> selector </th>
+					 	<th> Description </th>
+					    	<th> Example </th>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	background-color
+						    	</code>
+					    	</td>
+					    	<td>
+							sets the background color of an element
+					    	</td>
+					    	<td>
+						    	<code> 
+								background-color: brown;
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	color
+						    	</code>
+					    	</td>
+					    	<td>
+							sets the text element color
+					    	</td>
+					    	<td>
+						    	<code> 
+								color: rebeccapurple;
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	font-family
+						    	</code>
+					    	</td>
+					    	<td>
+							prioritizes font family names and or generic familuynames
+					    	</td>
+					    	<td>
+						    	<code> 
+								font-family: Georgia, serif;
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	font-style
+						    	</code>
+					    	</td>
+					    	<td>
+							sets normal italic or bolique
+					    	</td>
+					    	<td>
+						    	<code> 
+								font-style: italic;
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	text-align
+						    	</code>
+					    	</td>
+					    	<td>
+							sets horizontal alignment in a block element or table cell
+					    	</td>
+					    	<td>
+						    	<code> 
+								text-align: right;
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	margin
+						    	</code>
+					    	</td>
+					    	<td>
+							ssets the margin on all four sides of the element
+					    	</td>
+					    	<td>
+						    	<code> 
+								margin: 1em;
+						    	</code>
+					    	</td>
+				    	</tr>
+				    	<tr>
+					    	<td>
+							<code>
+							    	padding
+						    	</code>
+					    	</td>
+					    	<td>
+							padding sets padding are on all four sides
+					    	</td>
+					    	<td>
+						    	<code> 
+								padding: 10% 0;
+						    	</code>
+					    	</td>
+				    	</tr>
+	    				
+		    		</table>
+		    	</section>
+	    	</main>
+
+    	</body>	
+</html>

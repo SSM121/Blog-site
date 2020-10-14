@@ -1,0 +1,77 @@
+#tipsnav {
+	border-style: double;
+	border-color: red;
+	width: 7%;
+	margin-left: 40%;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nav-element{
+	background-color: navy;
+	border: 5px solid black;
+	text-align: center;
+}
+
+.nav-b{
+	width: 100%;
+	border-spacing: 20px;
+}
+
+.nav-a{
+	color: white
+}
+
+.post{
+	border-style: solid;
+	margin: 30px;
+	border-radius: 10px;
+	background-color: rgba(192,192,192, 0.25)
+}
+
+.post-body{
+	margin: 10px;
+	font-family: "URW Chancery L";
+	font-size: 20px;
+
+}
+
+.post-postscript{
+	padding: 10px 45px 10px 45px;
+	font-style: italic;
+	color: rgba(0, 0, 0, .5)
+}
+
+.portrait{
+	height: 500px;
+	width: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.Name{
+	text-decoration: underline;
+}
+
+.bio{
+	margin: 0 10% 0 10%;
+}
+
+.row{
+	margin-bottom: 30px;
+}
+
+.card{
+	width: 30%;
+	margin-left:auto;
+	margin-right:auto;
+	border-color: black;
+}
