@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from datetime import datetime
+from django.urls import reverse
 from .models import Post, Comment
+from django.http import HttpResponse, HttpResponseRedirect
 def about(request):
     now = datetime.now()
     context = {'time': now, }
@@ -26,3 +28,10 @@ def single(request, blog_id):
     post = get_object_or_404(Post, pk=blog_id)
 
     return render(request, 'blog/single.html', {'post': post})
+
+def comment(request, blog_id):
+    q = Comment(comment_author=request.POST['name'], comment_email=request.POST['email'],
+            comment_content=request.POST['content'], comment_date=datetime.now(),
+            blog=Post.objects.get(pk=blog_id))
+    q.save()
+    return HttpResponseRedirect(reverse('blog:single', args=(blog_id,)))

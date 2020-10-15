@@ -23,6 +23,19 @@
 			-{{post.blog_author}}<br>
 			-{{post.blog_date}}
 		</div>
+		<div class="post-body">
+		Add a comment!
+		<form action="{% url "blog:comment" post.id %}" method="post">
+			{% csrf_token %}
+			<lable for="name"> Name </lable><br>
+			<input type="text" id="name" name="name" required><br>
+			<lable for="email"> Email </lable><br>
+			<input type="email" id="email" name="email" required><br>
+			<lable for"content"> comment </label><br>
+			<textarea name="content" type="content" required></textarea><br>
+			<input type="submit" value="Submit">
+		</form>
+		</div>
 		<ul>
 		{% for comment in post.comment_set.all|dictsortreversed:"comment_date" %}
 		<li class="post">
