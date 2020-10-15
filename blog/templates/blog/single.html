@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    	<head>
+        	<meta charset="utf-8"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		{% load static %}
+
+		<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+
+		<title>about.html</title>
+    	</head>
+	<body>
+		{% include 'blog/nav.html' %}
+		
+		<h2 class="post-title">
+			<a href="/blog/{{post.id}}/" > {{post.blog_title}} </a>
+		</h2>
+		<div class="post-body">
+			{{post.blog_content}}
+		</div>
+		<div class="post-postscript">
+			-{{post.blog_author}}<br>
+			-{{post.blog_date}}
+		</div>
+		<ul>
+		{% for comment in post.comment_set.all|dictsortreversed:"comment_date" %}
+		<li class="post">
+		<div class="post-body">
+			{{comment.comment_content}}
+		</div>
+		<div class="post-postscript">
+			-{{comment.comment_author}}<br>
+			-{{comment.comment_date}}
+		</div>
+		</li>
+		{%endfor%}
+		</ul>
+
+	</body>
+
+</html>

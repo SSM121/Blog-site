@@ -1,14 +1,14 @@
 
-				{% for post in latest_post_list %}
-				<li class="post">
-					<h2 class="post-title">
-						<a href="/blog/detail/{{post.id}}/" > {{post.blog_title}} </a>
-					</h2>
-					<div class="post-body">
-						{{post.blog_content|truncatewords:100}}
-					</div>
-					<div class="post-postscript">
-						-Comments: {{post.comment_set.all | length}}
-					</div>
-				</li>
-				{% endfor %}
+{% for post in latest_post_list %}
+<li class="post">
+	<h2 class="post-title">
+	<a href="/blog/{{post.id}}/" > {{post.blog_title}} </a>
+	</h2>
+	<div class="post-body">
+	{{post.blog_content|truncatewords:100}}
+	</div>
+	<div class="post-postscript">
+	-Comments: {{post.comment_set.all | length}}
+	</div>
+</li>
+{% endfor %}
