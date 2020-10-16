@@ -10,9 +10,44 @@ def populate_db(apps, schema_editor):
         blog_content="""Mauris posuere maximus massa eget viverra. Cras pretium est vitae velit aliquam, nec imperdiet magna malesuada. Donec convallis placerat nunc et tempor. Mauris maximus quam non turpis feugiat, quis elementum nunc malesuada. Vestibulum elementum erat est, eget viverra sem tincidunt in. Ut placerat auctor eros, vitae elementum nunc rhoncus vitae. Nulla vitae sodales erat, vel egestas sem. Nam ultricies ut mi sit amet vulputate. Quisque magna tortor, mollis nec posuere quis, imperdiet luctus tortor. Sed et volutpat mauris. Vestibulum cursus porta ornare. Maecenas a rhoncus felis. Etiam hendrerit semper dolor egestas varius.
 
     Praesent in vehicula purus. Etiam luctus, dui sed rutrum aliquam, ante tellus accumsan ante, in egestas sem orci vitae lectus. Nam aliquam diam ut pellentesque eleifend. Praesent et turpis eu quam euismod malesuada ac a nibh. Quisque fermentum risus a ornare ornare. Proin in hendrerit leo, sed faucibus neque. Curabitur nisl felis, dictum sodales bibendum in, iaculis eget. """,
-        blog_author="hank", blog_date=timezone.now())
+        blog_author="Hank", blog_date=timezone.now())
     p1.save()
 
+
+    p2 = Post(blog_title="Blog 2",
+        blog_content="""
+
+
+        Mauris posuere maximus massa eget viverra. Cras pretium est vitae velit aliquam, nec imperdiet magna malesuada. Donec convallis placerat nunc et tempor. Mauris maximus quam non turpis feugiat, quis elementum nunc malesuada. Vestibulum elementum erat est, eget viverra sem tincidunt in. Ut placerat auctor eros, vitae elementum nunc rhoncus vitae. Nulla vitae sodales erat, vel egestas sem. Nam ultricies ut mi sit amet vulputate. Quisque magna tortor, mollis nec posuere quis, imperdiet luctus tortor. Sed et volutpat mauris. Vestibulum cursus porta ornare. Maecenas a rhoncus felis. Etiam hendrerit semper dolor egestas varius.
+
+        Praesent in vehicula purus. Etiam luctus, dui sed rutrum aliquam, ante tellus accumsan ante, in egestas sem orci vitae lectus. Nam aliquam diam ut pellentesque eleifend. Praesent et turpis eu quam euismod malesuada ac a nibh. Quisque fermentum risus a ornare ornare. Proin in hendrerit leo, sed faucibus neque. Curabitur nisl felis, dictum sodales bibendum in, iaculis eget. 
+        """, blog_author="Melinda", blog_date=timezone.now())
+    p2.save()
+
+    p3 = Post(blog_title="Blog 3",
+        blog_content="""
+
+
+        Quisque ac tincidunt velit, quis euismod tellus. In hac habitasse platea dictumst. In faucibus vitae diam eu sagittis. Donec imperdiet magna ac venenatis congue. Curabitur in odio at mi ultrices sagittis sit amet vitae ex. Fusce lobortis vestibulum ante in elementum. Sed eleifend placerat est, id dignissim odio semper et. Proin ornare volutpat aliquam. Nulla facilisi. Donec in risus magna.
+
+        Vestibulum tincidunt eget odio sed dignissim. Suspendisse dictum malesuada lectus, sed consequat massa tempor in. Aliquam tempus pellentesque tortor, sit amet gravida dui maximus sed. Cras volutpat tortor tortor, non pharetra diam ornare non. Cras laoreet non turpis sit amet fringilla. Duis pulvinar lacus nec scelerisque viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lorem odio, porttitor vel ultricies ut, hendrerit ut felis. Nunc id quam interdum, vulputate lorem vitae, faucibus sem. Ut et auctor libero. Proin elementum consequat semper. Nullam sed libero sit amet nunc maximus mattis. 
+        """, blog_author="George", blog_date=timezone.now())
+
+    p3.save()
+    p4 = Post(blog_title="Blog 4",
+        blog_content="""
+
+
+        Nunc vulputate iaculis quam, nec vehicula dui hendrerit sed. Praesent faucibus molestie tortor, condimentum tincidunt felis viverra eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam ornare, dui sed fermentum cursus, nunc magna blandit orci, nec commodo nunc ex vel nisl. Vivamus efficitur augue id neque vestibulum, id congue libero lacinia. Suspendisse potenti. Pellentesque luctus vel mauris non semper. Quisque consequat, sem sit amet ultrices fringilla, ex augue rutrum mi, at mattis orci urna vitae dolor. Aliquam finibus enim ante, at tempus mauris convallis eget.
+
+        In dignissim tortor molestie odio hendrerit, sed molestie nibh vestibulum. Sed condimentum sapien lacus, vitae ultrices risus tincidunt non. In vehicula est id dolor eleifend, id maximus ante vestibulum. Sed eget feugiat magna. Cras condimentum nunc vitae felis facilisis, at egestas metus ultricies. Praesent sagittis eu diam vitae lacinia. Sed nulla ante, convallis vitae vestibulum sit amet, ultrices vel. 
+        """, blog_author="Jimothy", blog_date=timezone.now())
+    p4.save()
+    for i in range(4):
+        c = Comment(blog=p3, comment_content=
+            """Morbi ornare justo a urna convallis, ut pulvinar dui ultrices. Nam metus leo, suscipit fermentum placerat sed, auctor blandit leo. Suspendisse viverra dui non libero.""",
+            comment_email="jimoth@uuu.com", comment_date=timezone.now(), comment_author="Jimothy")
+        c.save()
 class Migration(migrations.Migration):
 
     dependencies = [
